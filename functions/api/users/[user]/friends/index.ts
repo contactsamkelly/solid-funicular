@@ -18,6 +18,5 @@ export async function onRequestPost(context) {
     username,
     id
   }
-  const result = await addFriend(context, userId, friendToBe);
-  return createResponse(result);
+  return await addFriend(context, userId, friendToBe);
 }

@@ -18,7 +18,7 @@ export const getUsers = async (context, {page = 0, limit = 25, filter = { search
       db.select().from(users).where(and(
         ilike(users.username, filter.search),
         not(eq(users.id, filter.excludeUser))
-      )).limit(clampedLimit).offset(page),
+      )).limit(clampedLimit).offset(page * limit),
       db.select({count: count()}).from(users),
       db.select({count: count()}).from(friends)
     ])
