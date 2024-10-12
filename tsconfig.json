@@ -19,10 +19,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": [
-        "@cloudflare/workers-types/2023-07-01"
-    ]
+    "types": ["@cloudflare/workers-types/2023-07-01"]
   },
   "include": ["src"],
+  "exclude": ["functions/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
